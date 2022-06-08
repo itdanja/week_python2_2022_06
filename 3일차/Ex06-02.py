@@ -43,7 +43,7 @@ top = -1
 ## 메인 코드 부분 ##
 if __name__ == "__main__" :
 
-	with open("진달래꽃.txt", 'r', encoding='UTF8') as rfp :
+	with open("../수업자료/진달래꽃.txt", 'r', encoding='UTF8') as rfp :
 		lineAry = rfp.readlines()
 
 	print("----- 원본 -----")
