@@ -2,7 +2,7 @@ from tkinter import *
 
 window = Tk()
 window.geometry("600x600")
-photo = PhotoImage(file ='pet01.gif')
+photo = PhotoImage(file ='../수업자료/pet01.gif')
 
 photoAry=[]
 h = photo.height()
@@ -13,8 +13,18 @@ for i in range(h) :
 		value = (r + g + b) // 3
 		photoAry.append(value)
 
-# 이 부분에 필요한 내용을 추가
+for i in range(len(photoAry)) :
+	if photoAry[i] <= 127 :
+		photoAry[i] = 0
+	else :
+		photoAry[i] = 255
 
+pos = 0
+for i in range(h) :
+	for k in range(w) :
+		r = g = b = photoAry[pos]
+		pos += 1
+		photo.put("#%02x%02x%02x" % (r, g, b), (i, k))
 
 paper = Label(window, image=photo)
 paper.pack(expand=1, anchor = CENTER)

@@ -29,7 +29,7 @@ def quickSort(ary) :
 ## 메인 코드 부분 ##
 window = Tk()
 window.geometry("600x600")
-photo = PhotoImage(file ='pet02.gif')
+photo = PhotoImage(file ='../수업자료/pet02.gif')
 
 photoAry=[]
 h = photo.height()
